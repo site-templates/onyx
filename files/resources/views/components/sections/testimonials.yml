@@ -1,0 +1,38 @@
+# The visual editor's contract for sections/testimonials.blade.php.
+title: Testimonials
+description: Three columns of hanging-punctuation quotes from the testimonials collection
+fields:
+    label:
+        type: text
+        label: Section label
+        default: "Testimonials"
+    showLink:
+        type: toggle
+        label: Show LinkedIn link
+        default: "1"
+    linkText:
+        type: text
+        label: Link text
+        default: "Read on LinkedIn"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "https://linkedin.com"
+    testimonials:
+        type: repeater
+        label: Quotes
+        item_label: name
+        add_button_label: Add quote
+        sub_fields:
+            quote:
+                type: textarea
+                label: Quote
+            name:
+                type: text
+                label: Name
+            role:
+                type: text
+                label: Role
+            avatar:
+                type: image
+                label: Avatar

@@ -1,0 +1,26 @@
+# The visual editor's contract for sections/contact-cta.blade.php.
+title: Contact
+description: The centered closing statement with the one solid accent button
+fields:
+    label:
+        type: text
+        label: Section label
+        default: "Contact"
+    heading:
+        type: textarea
+        label: Heading
+        rows: 2
+        default: "I am not just here to design products; I am here to connect with people."
+    body:
+        type: textarea
+        label: Body copy
+        rows: 2
+        default: "Say hello for a project, a question, or a very long conversation about typography."
+    buttonText:
+        type: text
+        label: Button text
+        default: "Let's talk"
+    buttonUrl:
+        type: url
+        label: Button URL
+        default: "mailto:hello@miloashe.studio"

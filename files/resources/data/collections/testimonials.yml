@@ -1,0 +1,6 @@
+# Column types for testimonials.json.
+fields:
+    quote: { type: textarea }
+    name: { type: text }
+    role: { type: text }
+    avatar: { type: image }

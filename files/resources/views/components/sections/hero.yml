@@ -1,0 +1,56 @@
+# The visual editor's contract for sections/hero.blade.php: each field maps
+# to a prop in the component's props block. Field names are camelCase.
+title: Hero
+description: The opening viewport — identity row, giant statement headline, intro copy, and the scroll ring
+fields:
+    avatar:
+        type: image
+        label: Avatar
+        default: "/images/avatar.jpg"
+    showStatus:
+        type: toggle
+        label: Show availability dot
+        default: "1"
+    email:
+        type: text
+        label: Email address
+        default: "hello@miloashe.studio"
+    heading:
+        type: text
+        label: Headline
+        default: "Digital Designer"
+    intro:
+        type: textarea
+        label: Intro copy
+        rows: 3
+        default: "I inject personality into pixels, designing digital experiences that connect and feel human. Based in London."
+    showScroll:
+        type: toggle
+        label: Show scroll hint
+        default: "1"
+    scrollText:
+        type: text
+        label: Scroll hint text
+        default: "Scroll to explore"
+    socials:
+        type: repeater
+        label: Social links
+        source: site.socials
+        item_label: label
+        add_button_label: Add social link
+        sub_fields:
+            label:
+                type: text
+                label: Label
+            url:
+                type: url
+                label: URL
+            icon:
+                type: select
+                label: Icon
+                options:
+                    twitter: Twitter
+                    dribbble: Dribbble
+                    instagram: Instagram
+                    linkedin: LinkedIn
+                    github: GitHub

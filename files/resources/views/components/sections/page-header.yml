@@ -1,0 +1,25 @@
+# The visual editor's contract for sections/page-header.blade.php.
+title: Page header
+description: Back link, mono label, and display heading for secondary pages
+fields:
+    backText:
+        type: text
+        label: Back link text
+        default: "Back to homepage"
+    backUrl:
+        type: url
+        label: Back link URL
+        default: "/"
+    label:
+        type: text
+        label: Label
+        default: ""
+    heading:
+        type: text
+        label: Heading
+        default: "Page"
+    body:
+        type: textarea
+        label: Standfirst
+        rows: 2
+        default: ""

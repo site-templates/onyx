@@ -1,0 +1,9 @@
+# The visual editor's contract for sections/writing-body.blade.php.
+# The article HTML and next-post pointer are bound from the matched entry.
+title: Article body
+description: The prose body and next-post pointer for a writing detail page
+fields:
+    nextLabel:
+        type: text
+        label: Next-post label
+        default: "Next up"

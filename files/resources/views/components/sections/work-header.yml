@@ -1,0 +1,30 @@
+# The visual editor's contract for sections/work-header.blade.php.
+# Content values (title, tagline, meta, image) are bound from the matched
+# works entry, so only the static labels appear here.
+title: Case-study header
+description: Back link, title, tagline, meta strip, and hero image for a work detail page
+fields:
+    backText:
+        type: text
+        label: Back link text
+        default: "Back to homepage"
+    backUrl:
+        type: url
+        label: Back link URL
+        default: "/"
+    yearLabel:
+        type: text
+        label: Year label
+        default: "Year:"
+    timeframeLabel:
+        type: text
+        label: Timeframe label
+        default: "Timeframe:"
+    toolsLabel:
+        type: text
+        label: Tools label
+        default: "Tools:"
+    categoryLabel:
+        type: text
+        label: Category label
+        default: "Category:"

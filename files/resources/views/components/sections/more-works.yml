@@ -1,0 +1,9 @@
+# The visual editor's contract for sections/more-works.blade.php.
+# The skip attribute is bound to the current entry's slug on the page.
+title: More works
+description: The other projects from the works collection, shown under a case study
+fields:
+    label:
+        type: text
+        label: Section label
+        default: "You might also like"

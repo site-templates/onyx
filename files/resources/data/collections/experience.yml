@@ -1,0 +1,6 @@
+# Column types for experience.json.
+fields:
+    from: { type: text }
+    to: { type: text }
+    role: { type: text }
+    company: { type: text }

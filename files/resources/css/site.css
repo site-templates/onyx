@@ -1,0 +1,239 @@
+/*
+    Onyx — tokens, the reveal system, the ticker marquee, and prose.
+
+    Inlined after Tailwind by the layout's vite call, so everything here
+    applies to every page. The tokens become real utilities: bg-canvas,
+    bg-surface, bg-well, text-ink, text-muted, text-faint, border-line,
+    bg-accent, text-accent-ink, bg-live, font-display, font-sans, font-mono.
+
+    Light-only by design — the paper-gray monochrome IS the template.
+*/
+
+@import "tailwindcss";
+
+@theme {
+    /* Ground */
+    --color-canvas: #f9f9fa;
+    --color-surface: #ffffff;
+    --color-well: #ececee;
+    --color-line: rgb(20 20 21 / 0.08);
+
+    /* Text */
+    --color-ink: #141415;
+    --color-muted: #656572;
+    --color-faint: #70707f;
+
+    /* The solid pill button */
+    --color-accent: #141415;
+    --color-accent-ink: #f9f9fa;
+
+    /* The availability dot — the only hue on the site */
+    --color-live: #2ecc71;
+
+    /* Type — Inter Tight display, Inter body, Fragment Mono labels */
+    --font-display: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Fragment Mono", ui-monospace, "SF Mono", monospace;
+
+    /* One easing family for everything that moves */
+    --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+    background-color: var(--color-canvas);
+    color-scheme: light;
+    scrollbar-color: color-mix(in oklab, var(--color-muted) 45%, var(--color-canvas)) transparent;
+}
+
+/* Bits that only make sense once JavaScript runs, like the footer clock. */
+html:not(.js) .js-only {
+    display: none;
+}
+
+/* One stray wide element must never give the page a sideways scroll. */
+body {
+    overflow-x: clip;
+}
+
+::selection {
+    background-color: var(--color-ink);
+    color: var(--color-canvas);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Headings that skip an explicit font class still speak the display voice. */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+}
+
+/*
+    The reveal system. main.js adds .js to the html element before first
+    paint, then an IntersectionObserver flips .is-visible as each
+    [data-reveal] scrolls into view. Without JavaScript nothing is ever
+    hidden; with reduced motion everything is instantly visible.
+*/
+.js [data-reveal] {
+    opacity: 0;
+    translate: 0 14px;
+    transition:
+        opacity 0.7s var(--ease-spring),
+        translate 0.7s var(--ease-spring);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js [data-reveal].is-visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.reveal-1 { --reveal-delay: 80ms; }
+.reveal-2 { --reveal-delay: 160ms; }
+.reveal-3 { --reveal-delay: 240ms; }
+.reveal-4 { --reveal-delay: 320ms; }
+
+@media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] {
+        opacity: 1;
+        translate: 0 0;
+        transition: none;
+    }
+}
+
+/*
+    The card ticker — a pill whose inner track scrolls its repeated
+    year ✦ category content sideways. The track holds two identical halves,
+    so a -50% translate loops seamlessly.
+*/
+.ticker-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: onyx-ticker 12s linear infinite;
+}
+
+@keyframes onyx-ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* The dashed scroll ring spins slowly beside "Scroll to explore". */
+.scroll-ring {
+    animation: onyx-spin 14s linear infinite;
+}
+
+@keyframes onyx-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ticker-track,
+    .scroll-ring {
+        animation: none;
+    }
+}
+
+/*
+    Prose — writing bodies arrive as raw HTML from the collection, so the
+    elements are styled here with the theme variables.
+*/
+.prose {
+    font-size: var(--text-base);
+    line-height: --spacing(7);
+    color: var(--color-muted);
+}
+
+.prose > * + * {
+    margin-top: --spacing(5);
+}
+
+.prose h2,
+.prose h3 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-ink);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+}
+
+.prose h2 {
+    font-size: var(--text-2xl);
+    margin-top: --spacing(12);
+}
+
+.prose h3 {
+    font-size: var(--text-xl);
+    margin-top: --spacing(10);
+}
+
+.prose strong {
+    color: var(--color-ink);
+    font-weight: var(--font-weight-semibold);
+}
+
+.prose a {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in oklab, var(--color-ink) 30%, transparent);
+}
+
+@variant hover {
+    .prose a {
+        text-decoration-color: var(--color-ink);
+    }
+}
+
+.prose ul,
+.prose ol {
+    padding-left: --spacing(5);
+}
+
+.prose ul {
+    list-style: disc;
+}
+
+.prose ol {
+    list-style: decimal;
+}
+
+.prose li + li {
+    margin-top: --spacing(2);
+}
+
+.prose blockquote {
+    border-left: 2px solid var(--color-ink);
+    padding-left: --spacing(5);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    letter-spacing: -0.01em;
+}
+
+.prose code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background-color: var(--color-well);
+    border-radius: var(--radius-sm);
+    padding: --spacing(0.5) --spacing(1.5);
+}
+
+.prose pre {
+    background-color: var(--color-well);
+    border-radius: var(--radius-lg);
+    padding: --spacing(5);
+    overflow-x: auto;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.prose img {
+    border-radius: var(--radius-2xl);
+    width: 100%;
+}

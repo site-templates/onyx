@@ -1,0 +1,38 @@
+# The visual editor's contract for sections/experience-list.blade.php.
+title: Experience
+description: A hairline ledger of roles from the experience collection with an optional CV button
+fields:
+    label:
+        type: text
+        label: Section label
+        default: "Experience"
+    showCv:
+        type: toggle
+        label: Show CV button
+        default: "1"
+    cvText:
+        type: text
+        label: CV button text
+        default: "Download CV"
+    cvUrl:
+        type: url
+        label: CV button URL
+        default: "#"
+    experience:
+        type: repeater
+        label: Roles
+        item_label: role
+        add_button_label: Add role
+        sub_fields:
+            from:
+                type: text
+                label: From
+            to:
+                type: text
+                label: To
+            role:
+                type: text
+                label: Role
+            company:
+                type: text
+                label: Company

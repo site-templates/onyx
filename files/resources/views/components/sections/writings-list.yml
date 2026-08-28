@@ -1,0 +1,45 @@
+# The visual editor's contract for sections/writings-list.blade.php.
+title: Writings ledger
+description: Hairline rows of date, title, and read time fed by the writings collection
+fields:
+    label:
+        type: text
+        label: Section label
+        default: "Writing"
+    showDescriptions:
+        type: toggle
+        label: Show descriptions
+        default: "0"
+    showAll:
+        type: toggle
+        label: Show the all-writings link
+        default: "1"
+    allText:
+        type: text
+        label: All-writings link text
+        default: "All writings"
+    allUrl:
+        type: url
+        label: All-writings link URL
+        default: "/writings"
+    writings:
+        type: repeater
+        label: Writings
+        item_label: title
+        add_button_label: Add writing
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            description:
+                type: textarea
+                label: Description
+            dateFormatted:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Read time
+            link:
+                type: url
+                label: Link

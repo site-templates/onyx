@@ -1,0 +1,12 @@
+# Column types for writings.json — richtext columns open the rich editor
+# in the Content drawer and any repeater listing this collection.
+fields:
+    slug: { type: text }
+    title: { type: text }
+    description: { type: textarea }
+    dateFormatted: { type: text }
+    readTime: { type: text }
+    link: { type: url }
+    content: { type: richtext }
+    nextTitle: { type: text }
+    nextLink: { type: text }

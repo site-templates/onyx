@@ -1,0 +1,32 @@
+[
+    {
+        "from": "2024",
+        "to": "Now",
+        "role": "Design Lead",
+        "company": "Fathom"
+    },
+    {
+        "from": "2022",
+        "to": "2024",
+        "role": "Sr Product Designer",
+        "company": "Loom"
+    },
+    {
+        "from": "2020",
+        "to": "2022",
+        "role": "Product Designer",
+        "company": "Monzo"
+    },
+    {
+        "from": "2019",
+        "to": "2020",
+        "role": "Design Intern",
+        "company": "Monzo"
+    },
+    {
+        "from": "2017",
+        "to": "2019",
+        "role": "Graphic Designer",
+        "company": "Studio North"
+    }
+]

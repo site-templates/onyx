@@ -1,0 +1,38 @@
+# The visual editor's contract for components/footer.blade.php.
+title: Footer
+description: The mark, copyright, location clock, and text social links
+fields:
+    location:
+        type: text
+        label: Location
+        default: "London, UK"
+    showTime:
+        type: toggle
+        label: Show local time
+        default: "1"
+    copyright:
+        type: text
+        label: Copyright text
+        default: "All rights reserved."
+    socials:
+        type: repeater
+        label: Social links
+        source: site.socials
+        item_label: label
+        add_button_label: Add social link
+        sub_fields:
+            label:
+                type: text
+                label: Label
+            url:
+                type: url
+                label: URL
+            icon:
+                type: select
+                label: Icon
+                options:
+                    twitter: Twitter
+                    dribbble: Dribbble
+                    instagram: Instagram
+                    linkedin: LinkedIn
+                    github: GitHub

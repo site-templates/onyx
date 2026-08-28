@@ -1,0 +1,32 @@
+# The visual editor's contract for sections/works-grid.blade.php.
+title: Work grid
+description: Two columns of large project cards with hover ticker pills, fed by the works collection
+fields:
+    headingLevel:
+        type: text
+        label: Hidden section heading (screen readers)
+        default: "Selected works"
+    works:
+        type: repeater
+        label: Projects
+        item_label: title
+        add_button_label: Add project
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            year:
+                type: text
+                label: Year
+            category:
+                type: text
+                label: Category
+            image:
+                type: image
+                label: Card image
+            imageAlt:
+                type: text
+                label: Image alt text
+            link:
+                type: url
+                label: Link

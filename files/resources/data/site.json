@@ -1,0 +1,34 @@
+{
+    "name": "Milo Ashe",
+    "socials": [
+        {
+            "label": "Twitter",
+            "url": "https://twitter.com",
+            "icon": "twitter"
+        },
+        {
+            "label": "Dribbble",
+            "url": "https://dribbble.com",
+            "icon": "dribbble"
+        },
+        {
+            "label": "Instagram",
+            "url": "https://instagram.com",
+            "icon": "instagram"
+        }
+    ],
+    "facts": [
+        {
+            "text": "9+ years of experience"
+        },
+        {
+            "text": "Currently designing at Fathom"
+        },
+        {
+            "text": "Building Onyx on the side"
+        },
+        {
+            "text": "Will talk about typography unprompted"
+        }
+    ]
+}

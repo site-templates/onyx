@@ -1,0 +1,13 @@
+# The visual editor's contract for layouts/main.blade.php.
+title: Layout
+description: The document shell — fonts, favicon, styles, and the footer
+fields:
+    title:
+        type: text
+        label: Page title
+        default: "Home"
+    description:
+        type: textarea
+        label: Meta description
+        rows: 2
+        default: ""

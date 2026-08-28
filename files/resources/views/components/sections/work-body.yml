@@ -1,0 +1,17 @@
+# The visual editor's contract for sections/work-body.blade.php.
+# Story content is bound from the matched works entry; the labels live here.
+title: Case-study story
+description: Overview, problem, and solution blocks for a work detail page
+fields:
+    overviewLabel:
+        type: text
+        label: Overview label
+        default: "Overview"
+    problemLabel:
+        type: text
+        label: Problem label
+        default: "Problem"
+    solutionLabel:
+        type: text
+        label: Solution label
+        default: "Solution"

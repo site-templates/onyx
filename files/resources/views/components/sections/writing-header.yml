@@ -1,0 +1,13 @@
+# The visual editor's contract for sections/writing-header.blade.php.
+# The title, date, and read time are bound from the matched writings entry.
+title: Article header
+description: Back link, date line, and title for a writing detail page
+fields:
+    backText:
+        type: text
+        label: Back link text
+        default: "All writings"
+    backUrl:
+        type: url
+        label: Back link URL
+        default: "/writings"

@@ -1,0 +1,17 @@
+# Column types for works.json — the source of truth the builder reads:
+# the Content drawer and any repeater listing this collection use these.
+fields:
+    slug: { type: text }
+    title: { type: text }
+    tagline: { type: text }
+    year: { type: text }
+    category: { type: text }
+    timeframe: { type: text }
+    tools: { type: text }
+    image: { type: image }
+    imageAlt: { type: text }
+    link: { type: url }
+    lede: { type: textarea }
+    overview: { type: textarea }
+    problem: { type: textarea }
+    solution: { type: textarea }

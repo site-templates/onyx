@@ -1,0 +1,46 @@
+[
+    {
+        "slug": "personality-is-a-feature",
+        "title": "Personality is a feature",
+        "description": "Products do not lose users to bugs half as often as they lose them to blandness. A case for designing character on purpose.",
+        "dateFormatted": "Aug 12, 2026",
+        "readTime": "5 min read",
+        "link": "/writing/personality-is-a-feature",
+        "content": "<p>Ask a team what their product feels like and you will get a roadmap. Ask their users and you will get an adjective. The gap between those two answers is where most redesigns should start.</p><p>Personality is not a coat of paint applied after the flows work. It is a set of decisions — how the product greets you, how it apologises, how loudly it celebrates, what it refuses to do. Those decisions get made whether or not a designer makes them. An unowned personality defaults to beige.</p><h2>Character is a constraint</h2><p>The useful move is to write the character down before the first screen. Two or three sentences: what this product would say at a party, what it would never say. Aura's was &ldquo;a good host, not a butler&rdquo; — warm, present, never hovering. That single line killed a dozen notification ideas in review, and every kill made the product more itself.</p><p>Constraints like this are cheap to write and expensive to skip. Without them, every contributor ships their own tone, and the product ends up with the personality of a committee.</p><p>The objection is always the same: personality polarises. Good. A product that nobody dislikes is a product nobody describes. You are not designing for everyone; you are designing so that someone, describing you at dinner, has something to say.</p>",
+        "nextTitle": "The case for slower interfaces",
+        "nextLink": "/writing/the-case-for-slower-interfaces"
+    },
+    {
+        "slug": "the-case-for-slower-interfaces",
+        "title": "The case for slower interfaces",
+        "description": "Speed is a virtue until it becomes a nervous tic. Sometimes the most confident thing an interface can do is take a beat.",
+        "dateFormatted": "Jun 30, 2026",
+        "readTime": "4 min read",
+        "link": "/writing/the-case-for-slower-interfaces",
+        "content": "<p>We optimised the wait out of everything, then wondered why nothing feels considered. There is a difference between an interface that is fast and one that is jumpy — and users feel it even when they cannot name it.</p><p>Watch someone sign a mortgage in an app that responds in eleven milliseconds. The speed reads as indifference. Some moments carry weight, and the interface should carry it with them.</p><h2>Pace is information</h2><p>A deliberate 400 milliseconds on a destructive confirmation is not latency, it is punctuation. The pause tells the user: this one matters. Stride's post-run summary fades in over half a second — not because we could not render it faster, but because arrival should feel like exhale, not interrupt.</p><p>The craft is in choosing where to spend slowness. Ninety-five percent of an interface should be instant. The remaining five percent — commitments, reveals, endings — earn their tempo. That contrast is what makes the fast parts feel fast.</p><p>Speed is table stakes. Rhythm is design.</p>",
+        "nextTitle": "Designing with defaults",
+        "nextLink": "/writing/designing-with-defaults"
+    },
+    {
+        "slug": "designing-with-defaults",
+        "title": "Designing with defaults",
+        "description": "The default state is the product. Everything else is a settings page most people will never open.",
+        "dateFormatted": "Apr 18, 2026",
+        "readTime": "6 min read",
+        "link": "/writing/designing-with-defaults",
+        "content": "<p>Roughly nine in ten users never change a default. That number should terrify and liberate you in equal measure: terrify, because your defaults are your product for most people; liberate, because it means you get to decide what good looks like.</p><p>Teams treat settings as generosity. More often they are abdication — every toggle is a decision the team could not make, shipped to someone with less context to make it instead.</p><h2>Defaults are opinions</h2><p>The best defaults encode a point of view. Ledger ships with plain-language balances because we believe hex strings are for auditors. Verse opens with suggestions collapsed because we believe the writer's cursor is sacred. Users can change both. Almost nobody does — not because they cannot find the switch, but because the opinion is right.</p><p>A practical test for any new setting: if you cannot say which value ninety percent of users should want, you have not finished designing. The setting is a question you are asking your users. Answer it yourself first.</p><p>Strong defaults, few settings, and the humility to change the default when the data disagrees — that is the whole discipline.</p>",
+        "nextTitle": "Notes on taste",
+        "nextLink": "/writing/notes-on-taste"
+    },
+    {
+        "slug": "notes-on-taste",
+        "title": "Notes on taste",
+        "description": "Taste is not a gift. It is a backlog of strong opinions you were willing to test against the world.",
+        "dateFormatted": "Jan 09, 2026",
+        "readTime": "3 min read",
+        "link": "/writing/notes-on-taste",
+        "content": "<p>People talk about taste like an inheritance — you have it or you do not. Ten years in, I think taste is closer to a savings account: small, regular deposits of attention, compounding.</p><p>Every designer I admire does the same unglamorous thing: they notice. They can tell you why a menu feels heavy, why a serif feels smug, why a green is cheap. Not because they memorised rules, but because they stopped scrolling long enough to ask the question.</p><h2>Practising it</h2><p>Three habits, none of them mystical. Collect ruthlessly — not moodboards of everything, but a small folder of work that makes you jealous. Copy privately — redraw the thing you admire until you can see the decisions inside it. And ship your opinion — taste that never survives contact with users is just preference.</p><p>The last one is the filter. Plenty of people have opinions about design. Taste is what remains after the world has edited them.</p>",
+        "nextTitle": "Personality is a feature",
+        "nextLink": "/writing/personality-is-a-feature"
+    }
+]

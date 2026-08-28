@@ -1,0 +1,31 @@
+# The visual editor's contract for sections/about.blade.php.
+title: About
+description: The two-tone about statement with the stacked parenthetical facts
+fields:
+    label:
+        type: text
+        label: Section label
+        default: "About"
+    headingInk:
+        type: text
+        label: Heading (first line)
+        default: "Hi, I am Milo Ashe"
+    headingMuted:
+        type: text
+        label: Heading (second line, muted)
+        default: "A Digital Designer"
+    body:
+        type: textarea
+        label: Body copy
+        rows: 4
+        default: "I have spent the last nine years with startups, making sure design lifts the brand and still answers to the business. I move between branding, UX, UI, and web — and I am happiest when a product starts to feel like a person you would want to talk to."
+    facts:
+        type: repeater
+        label: Facts
+        source: site.facts
+        item_label: text
+        add_button_label: Add fact
+        sub_fields:
+            text:
+                type: text
+                label: Fact

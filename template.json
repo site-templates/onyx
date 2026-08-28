@@ -1,0 +1,15 @@
+{
+    "name": "Onyx",
+    "dialect": "blade",
+    "description": "A Swiss-minimal personal portfolio with a giant statement hero, hover-ticker project cards, a writings ledger, and a monochrome voice broken only by one green availability dot.",
+    "icon": "⬤",
+    "repo": "https://github.com/site-templates/onyx",
+    "order": 26,
+    "category": "portfolio",
+    "theme": "light",
+    "accent": "#141415",
+    "pages": [
+        "Home",
+        "Writings"
+    ]
+}
