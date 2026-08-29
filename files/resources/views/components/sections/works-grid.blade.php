@@ -19,6 +19,8 @@
                         <span class="ticker-track font-mono text-xs text-ink">
                             <span class="px-2">{{ $item->year }}</span><span aria-hidden="true">✦</span><span class="px-2">{{ $item->category }}</span><span aria-hidden="true">✦</span><span class="px-2">{{ $item->year }}</span><span aria-hidden="true">✦</span><span class="px-2">{{ $item->category }}</span><span aria-hidden="true">✦</span>
                         </span>
+                        <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-8 rounded-l-full bg-linear-to-r from-surface to-transparent"></span>
+                        <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-8 rounded-r-full bg-linear-to-l from-surface to-transparent"></span>
                     </span>
 
                     <span class="absolute bottom-4 left-4 inline-flex rounded-full bg-surface/95 px-4 py-2 text-sm font-medium text-ink opacity-100 transition-opacity duration-200 pointer-fine:opacity-0 pointer-fine:group-hover:opacity-100">{{ $item->title }}</span>
