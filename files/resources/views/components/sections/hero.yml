@@ -18,7 +18,7 @@ fields:
     heading:
         type: text
         label: Headline
-        default: "Developer and Builder"
+        default: "Designer and Builder"
     intro:
         type: textarea
         label: Intro copy

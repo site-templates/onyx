@@ -2,7 +2,7 @@
     'avatar' => '/images/avatar.jpg',
     'showStatus' => '1',
     'email' => 'hello@miloashe.studio',
-    'heading' => 'Developer and Builder',
+    'heading' => 'Designer and Builder',
     'intro' => 'I inject personality into pixels, designing digital experiences that connect and feel human. Based in London.',
     'showScroll' => '1',
     'scrollText' => 'Scroll to explore',
@@ -60,9 +60,9 @@
         </div>
 
         <div class="mt-16">
-            <h1 class="font-display text-[clamp(2.75rem,7vw,6.5rem)]/[1.05] font-medium tracking-tight text-balance" data-reveal>{{ $heading }}</h1>
+            <h1 class="font-display text-[clamp(2.75rem,8vw,7.0625rem)]/[1.05] font-medium tracking-tight text-balance" data-reveal>{{ $heading }}</h1>
 
-            <div class="mt-10 flex flex-wrap items-end justify-between gap-x-16 gap-y-10 sm:mt-14">
+            <div class="mt-6 flex flex-wrap items-end justify-between gap-x-16 gap-y-10 sm:mt-8">
                 <p class="max-w-[56ch] text-xl/8 text-pretty text-muted sm:text-2xl/9" data-reveal>{{ $intro }}</p>
 
                 @if ($showScroll)
