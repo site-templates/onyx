@@ -31,6 +31,7 @@ fields:
                 type: select
                 label: Icon
                 options:
+                    x: X
                     twitter: Twitter
                     dribbble: Dribbble
                     instagram: Instagram

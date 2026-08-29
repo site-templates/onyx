@@ -2,7 +2,7 @@
     'avatar' => '/images/avatar.jpg',
     'showStatus' => '1',
     'email' => 'hello@miloashe.studio',
-    'heading' => 'Digital Designer',
+    'heading' => 'Developer and Builder',
     'intro' => 'I inject personality into pixels, designing digital experiences that connect and feel human. Based in London.',
     'showScroll' => '1',
     'scrollText' => 'Scroll to explore',
@@ -34,6 +34,9 @@
                 @foreach ($site->socials as $item)
                 <li>
                     <a href="{{ $item->url }}" aria-label="{{ $item->label }}" class="relative text-muted hover:text-ink">
+                        @if ($item->icon == 'x')
+                        <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+                        @endif
                         @if ($item->icon == 'twitter')
                         <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true"><path d="M23 4.9c-.8.4-1.7.6-2.6.8a4.5 4.5 0 0 0 2-2.5c-.9.5-1.9.9-2.9 1.1a4.5 4.5 0 0 0-7.7 4.1A12.8 12.8 0 0 1 2.5 3.7a4.5 4.5 0 0 0 1.4 6 4.4 4.4 0 0 1-2-.5v.1a4.5 4.5 0 0 0 3.6 4.4 4.6 4.6 0 0 1-2 .1 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 18.7a12.7 12.7 0 0 0 6.9 2c8.3 0 12.8-6.8 12.8-12.8v-.6c.9-.6 1.6-1.4 2.2-2.4Z"/></svg>
                         @endif
@@ -57,10 +60,10 @@
         </div>
 
         <div class="mt-16">
-            <h1 class="font-display text-[clamp(3.25rem,10vw,8.25rem)]/[1.02] font-medium tracking-tight text-balance" data-reveal>{{ $heading }}</h1>
+            <h1 class="font-display text-[clamp(2.75rem,7vw,6.5rem)]/[1.05] font-medium tracking-tight text-balance" data-reveal>{{ $heading }}</h1>
 
             <div class="mt-10 flex flex-wrap items-end justify-between gap-x-16 gap-y-10 sm:mt-14">
-                <p class="max-w-[44ch] text-xl/8 text-pretty text-muted sm:text-2xl/9" data-reveal>{{ $intro }}</p>
+                <p class="max-w-[56ch] text-xl/8 text-pretty text-muted sm:text-2xl/9" data-reveal>{{ $intro }}</p>
 
                 @if ($showScroll)
                 <a href="#works" class="group flex items-center gap-4 text-muted hover:text-ink" data-reveal>

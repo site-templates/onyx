@@ -42,7 +42,7 @@ scale, weight, and whitespace.
 - **Labels — Fragment Mono** (`font-mono`): section labels, dates, meta
   values, "Scroll to explore". `0.75rem`, `tracking-wide`; dates are
   `tabular-nums`.
-- Scale: hero `clamp(3.25rem → 8.25rem)`; section statements
+- Scale: hero `clamp(2.75rem → 6.5rem)` (one line on desktop); section statements
   `clamp(2rem → 3.5rem)`; card/list titles `1.5–1.75rem`.
 
 ## Spacing & Radius

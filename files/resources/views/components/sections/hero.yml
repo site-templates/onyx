@@ -18,7 +18,7 @@ fields:
     heading:
         type: text
         label: Headline
-        default: "Digital Designer"
+        default: "Developer and Builder"
     intro:
         type: textarea
         label: Intro copy
@@ -49,6 +49,7 @@ fields:
                 type: select
                 label: Icon
                 options:
+                    x: X
                     twitter: Twitter
                     dribbble: Dribbble
                     instagram: Instagram

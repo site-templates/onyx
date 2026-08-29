@@ -2,19 +2,19 @@
     "name": "Milo Ashe",
     "socials": [
         {
-            "label": "Twitter",
-            "url": "https://twitter.com",
-            "icon": "twitter"
+            "label": "GitHub",
+            "url": "https://github.com",
+            "icon": "github"
         },
         {
-            "label": "Dribbble",
-            "url": "https://dribbble.com",
-            "icon": "dribbble"
+            "label": "X",
+            "url": "https://x.com",
+            "icon": "x"
         },
         {
-            "label": "Instagram",
-            "url": "https://instagram.com",
-            "icon": "instagram"
+            "label": "LinkedIn",
+            "url": "https://linkedin.com",
+            "icon": "linkedin"
         }
     ],
     "facts": [
