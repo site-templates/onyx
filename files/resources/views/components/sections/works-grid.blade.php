@@ -1,15 +1,17 @@
-@props(['headingLevel' => 'Selected works'])
+@props(['label' => 'Selected works'])
 <!--
-    The work grid: two columns of large rounded image cards. Hovering a card
+    The work grid: a mono section label, then two columns of large rounded
+    image cards. Hovering a card
     eases the image up to scale 1.03, raises the white ticker pill with its
     scrolling year and category strip, and shows the project-name chip. On
     touch screens both chips stay visible. Data comes from the global works
     collection; each entry's link points at its detail page.
 -->
-<section id="works" class="pb-16 sm:pb-24">
-    <h2 class="sr-only">{{ $headingLevel }}</h2>
+<section id="works" class="py-16 sm:py-28">
     <div class="mx-auto w-full max-w-[100rem] px-5 sm:px-8 lg:px-10">
-        <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <h2 class="font-mono text-xs tracking-wide text-faint" data-reveal>{{ $label }}</h2>
+
+        <ul role="list" class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             @foreach ($works as $item)
             <li data-reveal>
                 <a href="{{ $item->link }}" class="group relative block overflow-hidden rounded-2xl bg-well">

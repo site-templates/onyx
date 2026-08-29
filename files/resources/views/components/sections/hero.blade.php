@@ -2,6 +2,7 @@
     'avatar' => '/images/avatar.jpg',
     'showStatus' => '1',
     'email' => 'hello@miloashe.studio',
+    'eyebrow' => 'Available for new work',
     'heading' => 'Designer and Builder',
     'intro' => 'I inject personality into pixels, designing digital experiences that connect and feel human. Based in London.',
     'showScroll' => '1',
@@ -10,11 +11,12 @@
 <!--
     The opening viewport: identity row pinned to the top (avatar with the
     green live dot, name and mono email, stacked social icons on the right),
-    then the giant statement headline anchored low with the intro copy and
-    the spinning scroll ring sharing the bottom edge.
+    then the statement block anchored low: a mono availability eyebrow, the
+    giant display headline, and a bottom rail carrying the intro copy and
+    the spinning scroll ring.
 -->
 <section id="top" class="relative">
-    <div class="mx-auto flex min-h-[92svh] w-full max-w-[100rem] flex-col justify-between px-5 pt-6 pb-10 sm:px-8 sm:pt-8 lg:px-10">
+    <div class="mx-auto flex min-h-[84svh] w-full max-w-[100rem] flex-col justify-between gap-16 px-5 pt-6 pb-12 sm:px-8 sm:pt-8 sm:pb-16 lg:px-10">
 
         <div class="flex items-start justify-between gap-6">
             <div class="flex items-center gap-4">
@@ -24,9 +26,9 @@
                     <span class="absolute right-0 bottom-0 size-3 rounded-full bg-live ring-2 ring-canvas"></span>
                     @endif
                 </span>
-                <span class="flex flex-col gap-1">
-                    <span class="text-sm font-medium text-ink">{{ $site->name }}</span>
-                    <a href="mailto:{{ $email }}" class="font-mono text-xs text-muted hover:text-ink">{{ $email }}</a>
+                <span class="flex min-w-0 flex-col gap-1">
+                    <span class="block text-sm font-medium text-ink">{{ $site->name }}</span>
+                    <span class="block font-mono text-xs text-muted"><a href="mailto:{{ $email }}" class="hover:text-ink">{{ $email }}</a></span>
                 </span>
             </div>
 
@@ -52,17 +54,21 @@
                         @if ($item->icon == 'github')
                         <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true"><path fill-rule="evenodd" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7C6.7 19.9 6.1 18 6.1 18c-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" clip-rule="evenodd"/></svg>
                         @endif
-                        <span class="absolute top-1/2 left-1/2 size-[max(100%,2.75rem)] -translate-1/2 pointer-fine:hidden" aria-hidden="true"></span>
+                        <span class="absolute top-1/2 left-1/2 size-[max(100%,3rem)] -translate-1/2 pointer-fine:hidden" aria-hidden="true"></span>
                     </a>
                 </li>
                 @endforeach
             </ul>
         </div>
 
-        <div class="mt-16">
-            <h1 class="font-display text-[clamp(2.75rem,8vw,7.0625rem)]/[1.05] font-medium tracking-tight text-balance" data-reveal>{{ $heading }}</h1>
+        <div>
+            @if ($eyebrow)
+            <p class="font-mono text-xs tracking-wide text-faint" data-reveal>{{ $eyebrow }}</p>
+            @endif
 
-            <div class="mt-6 flex flex-wrap items-end justify-between gap-x-16 gap-y-10 sm:mt-8">
+            <h1 class="mt-6 font-display text-[clamp(2.75rem,8vw,7.0625rem)]/[1.05] font-medium tracking-tight text-balance sm:mt-8" data-reveal>{{ $heading }}</h1>
+
+            <div class="mt-8 flex flex-wrap items-end justify-between gap-x-16 gap-y-10 sm:mt-10">
                 <p class="max-w-[56ch] text-xl/8 text-pretty text-muted sm:text-2xl/9" data-reveal>{{ $intro }}</p>
 
                 @if ($showScroll)

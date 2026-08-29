@@ -8,11 +8,11 @@
     The article body: the entry's stored HTML inside the prose styles, then
     the next-post pointer. Both values are bound from the matched entry.
 -->
-<section class="py-12 sm:py-16">
+<section class="pt-10 pb-16 sm:pt-12 sm:pb-28">
     <div class="mx-auto w-full max-w-[100rem] px-5 sm:px-8 lg:px-10">
         <div class="prose mx-auto max-w-[46rem]">{!! $content !!}</div>
 
-        <div class="mx-auto mt-16 max-w-[46rem] border-t border-line pt-8 sm:mt-20">
+        <div class="mx-auto mt-16 max-w-[46rem] border-t border-line pt-8 sm:mt-24">
             <p class="font-mono text-xs tracking-wide text-faint">{{ $nextLabel }}</p>
             <a href="{{ $nextLink }}" class="group mt-4 flex items-baseline justify-between gap-6">
                 <span class="font-display text-2xl font-medium tracking-tight text-ink sm:text-3xl">{{ $nextTitle }}</span>

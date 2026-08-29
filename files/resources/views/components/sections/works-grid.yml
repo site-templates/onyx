@@ -1,10 +1,10 @@
 # The visual editor's contract for sections/works-grid.blade.php.
 title: Work grid
-description: Two columns of large project cards with hover ticker pills, fed by the works collection
+description: A mono section label over two columns of large project cards with hover ticker pills, fed by the works collection
 fields:
-    headingLevel:
+    label:
         type: text
-        label: Hidden section heading (screen readers)
+        label: Section label
         default: "Selected works"
     works:
         type: repeater

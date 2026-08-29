@@ -7,11 +7,11 @@
     attribute carries the current entry's slug so it never lists itself;
     the cards come from the global works collection.
 -->
-<section class="border-t border-line py-16 sm:py-24">
+<section class="border-t border-line py-16 sm:py-28">
     <div class="mx-auto w-full max-w-[100rem] px-5 sm:px-8 lg:px-10">
         <h2 class="font-mono text-xs tracking-wide text-faint" data-reveal>{{ $label }}</h2>
 
-        <ul role="list" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <ul role="list" class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
             @foreach ($works as $item)
             @if ($item->slug != $skip)
             <li data-reveal>

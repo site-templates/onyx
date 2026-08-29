@@ -42,24 +42,40 @@ scale, weight, and whitespace.
 - **Labels — Fragment Mono** (`font-mono`): section labels, dates, meta
   values, "Scroll to explore". `0.75rem`, `tracking-wide`; dates are
   `tabular-nums`.
-- Scale: hero `clamp(2.75rem → 7.0625rem, 113px cap)` (one line on desktop); section statements
-  `clamp(2rem → 3.5rem)`; card/list titles `1.5–1.75rem`.
+- Scale: hero `clamp(2.75rem → 7.0625rem, 113px cap)` (one line on desktop);
+  section statements step `text-4xl → sm:text-5xl → lg:3.5rem`; card/list
+  titles `1.5–1.75rem`.
 
 ## Spacing & Radius
 
 - Wide, near-full-bleed container: `max-w-[100rem]` with `px-5 sm:px-8
   lg:px-10` — content breathes to the viewport edges like the reference.
-- Section rhythm `py-16` mobile → `py-28` desktop, held everywhere.
+- Section rhythm `py-16` mobile → `py-28` desktop, held everywhere. The
+  closing contact section is the one exception (`py-20 sm:py-32`), and page
+  openers use `pt-8 sm:pt-10` so the section under them owns the rhythm.
+- Every section label sits `mt-10` above its content — one value, all pages.
+- **One column gutter, `gap-x-6`**, across every multi-column block: the card
+  grids, the testimonial row, the case-study meta strip, and the 12-column
+  editorial grids. Rhythm comes from column spans, never from a wider gap.
+- Wide text sections ride a `lg:grid-cols-12` editorial grid rather than
+  `justify-between`, so nothing drifts to the far edge of a 1600px canvas:
+  About runs statement `col-span-7` / facts `col-start-8`, and a case study
+  runs label `col-span-2` / lede `col-span-6` / prose `col-span-4` — with
+  Problem and Solution landing on those same two column edges below.
 - Radius: project images `rounded-2xl`, chips and buttons `rounded-full`,
   everything else square with hairlines.
 
 ## Components
 
 - **Hero**: identity row pinned top (avatar with the green live dot, name +
-  mono email left, stacked social icons right), then a viewport-filling
-  statement — the giant display headline bottom-left, two-line intro, and a
-  mono "Scroll to explore" beside a slowly spinning dashed ring bottom-right.
-- **Work cards**: large `rounded-2xl` images in a 2-col grid. Hover raises a
+  mono email left, stacked social icons right), then a statement block
+  anchored low across `min-h-[84svh]` — a mono availability eyebrow, the
+  giant display headline, and a bottom rail carrying the two-line intro with
+  a mono "Scroll to explore" beside a slowly spinning dashed ring. The hero
+  deliberately stops short of a full viewport so the "Selected works" label
+  peeks below the fold and the scroll cue means something.
+- **Work cards**: a mono "Selected works" label over large `rounded-2xl`
+  images in a 2-col grid. Hover raises a
   white marquee ticker pill (year ✦ category, scrolling) top-right and the
   white project-name chip bottom-left; the image eases to scale 1.03.
 - **Writings ledger**: hairline rows — mono date · display title · read
@@ -67,6 +83,12 @@ scale, weight, and whitespace.
 - **About**: display statement, one paragraph, then the stacked mono
   parenthetical facts — "(8+ years of experience)" — a signature quirk.
 - **Experience**: hairline ledger rows (years | role | company).
+- **Writing pages**: the back link anchors to the page's left edge, the way
+  every other page in the template anchors it; meta, title, and body share
+  one centred `max-w-[46rem]` reading column below it.
+- **Footer**: two tiers — mark and text social links on the first line, then
+  a hairline and a mono legal line (copyright left, location + live clock
+  right).
 - **Buttons**: one solid `accent` pill per page ("Let's talk"); everything
   else is a bordered or ghost pill.
 

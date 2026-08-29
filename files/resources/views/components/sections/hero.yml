@@ -15,6 +15,10 @@ fields:
         type: text
         label: Email address
         default: "hello@miloashe.studio"
+    eyebrow:
+        type: text
+        label: Availability eyebrow
+        default: "Available for new work"
     heading:
         type: text
         label: Headline

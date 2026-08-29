@@ -13,16 +13,16 @@
     <div class="mx-auto w-full max-w-[100rem] px-5 sm:px-8 lg:px-10">
         <h2 class="font-mono text-xs tracking-wide text-faint" data-reveal>{{ $label }}</h2>
 
-        <div class="mt-10 flex flex-wrap items-start justify-between gap-x-16 gap-y-12">
-            <div class="min-w-0">
-                <p class="max-w-[24ch] font-display text-4xl/[1.1] font-medium tracking-tight text-balance sm:text-5xl/[1.08]" data-reveal>
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-12 lg:grid-cols-12">
+            <div class="min-w-0 lg:col-span-7">
+                <p class="max-w-[24ch] font-display text-4xl/[1.1] font-medium tracking-tight text-balance sm:text-5xl/[1.08] lg:text-[3.5rem]/[1.06]" data-reveal>
                     {{ $headingInk }}<br>
                     <span class="text-muted">{{ $headingMuted }}</span>
                 </p>
                 <p class="mt-8 max-w-[52ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $body }}</p>
             </div>
 
-            <ul role="list" class="flex shrink-0 flex-col gap-4 pt-2" data-reveal>
+            <ul role="list" class="flex flex-col gap-4 lg:col-span-5 lg:col-start-8 lg:pt-3" data-reveal>
                 @foreach ($site->facts as $item)
                 <li class="font-mono text-sm text-muted">({{ $item->text }})</li>
                 @endforeach

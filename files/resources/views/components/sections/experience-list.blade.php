@@ -12,7 +12,7 @@
     <div class="mx-auto w-full max-w-[100rem] px-5 sm:px-8 lg:px-10">
         <h2 class="font-mono text-xs tracking-wide text-faint" data-reveal>{{ $label }}</h2>
 
-        <ul role="list" class="mt-8 border-t border-line">
+        <ul role="list" class="mt-10 border-t border-line">
             @foreach ($experience as $item)
             <li class="flex flex-wrap items-baseline gap-x-8 gap-y-1 border-b border-line py-5 sm:flex-nowrap sm:py-6" data-reveal>
                 <span class="w-full shrink-0 font-mono text-xs text-faint tabular-nums sm:w-32">{{ $item->from }} — {{ $item->to }}</span>
