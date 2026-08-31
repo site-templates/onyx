@@ -19,7 +19,7 @@
             <ul role="list" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-base sm:text-sm">
                 @foreach ($site->socials as $item)
                 <li>
-                    <a href="{{ $item->url }}" class="font-normal text-muted hover:text-ink">{{ $item->label }}</a>
+                    <a href="{{ $item->url }}" target="_blank" rel="noopener" class="font-normal text-muted hover:text-ink">{{ $item->label }}</a>
                 </li>
                 @endforeach
             </ul>

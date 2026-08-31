@@ -14,7 +14,7 @@
         <div class="flex items-baseline justify-between gap-6" data-reveal>
             <h2 class="font-mono text-xs tracking-wide text-faint">{{ $label }}</h2>
             @if ($showLink)
-            <a href="{{ $linkUrl }}" class="group inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink">
+            <a href="{{ $linkUrl }}" target="_blank" rel="noopener" class="group inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink">
                 {{ $linkText }}
                 <svg viewBox="0 0 16 16" class="size-4 shrink-0 fill-current transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true"><path fill-rule="evenodd" d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z" clip-rule="evenodd"/></svg>
             </a>

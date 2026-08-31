@@ -35,7 +35,7 @@
             <ul role="list" class="flex flex-col items-end gap-5 pt-1">
                 @foreach ($site->socials as $item)
                 <li>
-                    <a href="{{ $item->url }}" aria-label="{{ $item->label }}" class="relative text-muted hover:text-ink">
+                    <a href="{{ $item->url }}" target="_blank" rel="noopener" aria-label="{{ $item->label }}" class="relative text-muted hover:text-ink">
                         @if ($item->icon == 'x')
                         <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
                         @endif
